@@ -1,4 +1,4 @@
 <h1> My Playlist </h1><br /><br />
 <% @music.each do |song| %>
-  <a href="/songs/<%= song %>" target="_blank"> <%= song %> </a><br />
+  <a href="/songs/<%= song %>" onclick="window.open('/songs/<%= song %>', 'newwindow','width=300,height=250'); return false;"> <%= song %> </a><br />
 <% end %>
