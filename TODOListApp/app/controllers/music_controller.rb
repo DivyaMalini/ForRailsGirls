@@ -1,13 +1,16 @@
 class MusicController < ApplicationController
-  before_action :set_idea, only: [:show, :edit, :update, :destroy]
-  musicdict = Hash.new
-  musicdict["1"] = "one"
-  musicdict["2"] = "two"
-  musicdict["3"] = "three"
+  #musicdict = {1: 'one', 2: 'two', 3: 'three'}
+  #musicdict["1"] = "one"
+  #musicdict["2"] = "two"
+  #musicdict["3"] = "three"
 
   # GET /ideas
   # GET /ideas.json
-  def getMusic(number)
-      @music =  musicdict[number.to_s]
+  def index
+    @music = Music.new.getAll
+      # @music =  musicdict[params['id']]
+  end
+
+  def show
   end
 end
