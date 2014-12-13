@@ -10,3 +10,4 @@ class MusicController < ApplicationController
   def getMusic(number)
       @music =  musicdict[number.to_s]
   end
+end
